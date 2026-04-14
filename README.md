@@ -1,0 +1,1 @@
+This C-based Gear Design Calculator computes essential gear parameters such as pitch diameter, addendum, dedendum, and center distance using standard formulas. It allows users to input module and number of teeth for two gears, making it useful for basic mechanical design and engineering projects.
