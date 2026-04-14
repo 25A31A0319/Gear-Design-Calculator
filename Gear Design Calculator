@@ -1,0 +1,56 @@
+#include <stdio.h>
+#include <math.h>
+
+// Function to calculate gear parameters
+void calculateGear(float module, int teeth1, int teeth2) {
+    float pitch_dia1, pitch_dia2;
+    float addendum, dedendum;
+    float center_distance;
+
+    // Pitch diameter
+    pitch_dia1 = module * teeth1;
+    pitch_dia2 = module * teeth2;
+
+    
+    addendum = module;
+    dedendum = 1.25 * module;
+
+    
+    center_distance = (pitch_dia1 + pitch_dia2) / 2;
+
+    printf("\n--- Gear Design Results ---\n");
+
+    printf("\nGear 1:\n");
+    printf("Number of Teeth = %d\n", teeth1);
+    printf("Pitch Diameter = %.2f mm\n", pitch_dia1);
+
+    printf("\nGear 2:\n");
+    printf("Number of Teeth = %d\n", teeth2);
+    printf("Pitch Diameter = %.2f mm\n", pitch_dia2);
+
+    printf("\nCommon Parameters:\n");
+    printf("Module = %.2f mm\n", module);
+    printf("Addendum = %.2f mm\n", addendum);
+    printf("Dedendum = %.2f mm\n", dedendum);
+    printf("Center Distance = %.2f mm\n", center_distance);
+}
+
+int main() {
+    float module;
+    int teeth1, teeth2;
+
+    printf("=== Gear Design Calculator ===\n");
+
+    printf("Enter module (mm): ");
+    scanf("%f", &module);
+
+    printf("Enter number of teeth for Gear 1: ");
+    scanf("%d", &teeth1);
+
+    printf("Enter number of teeth for Gear 2: ");
+    scanf("%d", &teeth2);
+
+    calculateGear(module, teeth1, teeth2);
+
+    return 0;
+}
